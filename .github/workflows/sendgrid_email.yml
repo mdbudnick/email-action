@@ -1,0 +1,17 @@
+name: SendGrid Email template
+
+on:
+  schedule:
+    - cron: '0 6 23 5 *'
+env:
+  SENDGRID_API_KEY: ${{ secrets.SENDGRID_API_KEY }}
+  TARGET_EMAIL_ADDRESS: ${{ secrets.TARGET_EMAIL_ADDRESS }}
+
+jobs:
+  send-email:
+    runs-on: ubuntu-latest
+    steps:
+     - name: SendGrid Action
+      # You may pin to the exact commit or the version.
+      # uses: peter-evans/sendgrid-action@759305bb5ea3ea76d9520c2c7fce146f656fac1a
+       uses: peter-evans/sendgrid-action@v1.0.1
