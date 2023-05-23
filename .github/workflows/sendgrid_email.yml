@@ -2,7 +2,7 @@ name: SendGrid Email template
 
 on:
   schedule:
-    - cron: '0 6 23 5 *'
+    - cron: '0 9 23 5 *'
 env:
   SENDGRID_API_KEY: ${{ secrets.SENDGRID_API_KEY }}
   TARGET_EMAIL_ADDRESS: ${{ secrets.TARGET_EMAIL_ADDRESS }}
