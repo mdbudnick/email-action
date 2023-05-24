@@ -1,8 +1,8 @@
 name: SendGrid Email template
 
-on:
-  schedule:
-    - cron: '0 12 23 5 *'
+on: 
+  workflow_dispatch:
+
 env:
   SENDGRID_API_KEY: ${{ secrets.SENDGRID_API_KEY }}
   TARGET_EMAIL_ADDRESS: ${{ secrets.TARGET_EMAIL_ADDRESS }}
