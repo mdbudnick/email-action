@@ -5,6 +5,7 @@ on:
 
 env:
   SENDGRID_API_KEY: ${{ secrets.SENDGRID_API_KEY }}
+  SCRIPT_FILEPATH: ../sendgrid.js
   TARGET_EMAIL_ADDRESS: ${{ secrets.TARGET_EMAIL_ADDRESS }}
 
 jobs:
